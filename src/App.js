@@ -5,6 +5,7 @@ import mainScreen from "./Components/Layouts/mainScreen";
 import Login from "./Components/auth/Login";
 import SignUp from "./Components/auth/SignUp";
 import Footer from "./Components/Layouts/Footer";
+import myProfile from "./Components/Profile/myProfile";
 
 class App extends React.Component {
   render() {
@@ -14,6 +15,7 @@ class App extends React.Component {
         <Route exact path="/" component={mainScreen} />
         <Route path="/Login" component={Login} />
         <Route path="/SignUp" component={SignUp} />
+        <Route path="/myProfile" component={myProfile} />
         <Footer />
       </div>
     );
