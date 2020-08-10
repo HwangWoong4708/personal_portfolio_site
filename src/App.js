@@ -5,7 +5,8 @@ import mainScreen from "./Components/Layouts/mainScreen";
 import Login from "./Components/auth/Login";
 import SignUp from "./Components/auth/SignUp";
 import Footer from "./Components/Layouts/Footer";
-import myProfile from "./Components/Profile/myProfile";
+import myProfile from "./Components/Layouts/myProfile";
+import Recruitment from "./Components/Layouts/Recruitment";
 
 class App extends React.Component {
   render() {
@@ -16,6 +17,7 @@ class App extends React.Component {
         <Route path="/Login" component={Login} />
         <Route path="/SignUp" component={SignUp} />
         <Route path="/myProfile" component={myProfile} />
+        <Route path="/Recruitment" component={Recruitment} />
         <Footer />
       </div>
     );

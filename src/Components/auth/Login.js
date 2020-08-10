@@ -1,7 +1,9 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-class SignUp extends React.Component {
+import { Row, Col } from "react-bootstrap";
+
+class Login extends React.Component {
   login = () => {
     const loginEmail = this.loginEmail.value;
     const loginPassword = this.loginPassword.value;
@@ -24,54 +26,75 @@ class SignUp extends React.Component {
       marginBottom: "10px",
     };
     const loginStyle = {
-      width: "40%",
+      width: "70%",
       margin: "0 auto",
-      marginTop: "30px",
+      marginTop: "20%",
+    };
+
+    const imgStyle = {
+      margin: "20%",
+
+      //width: "100%",
+    };
+    const loginRowStyle = {
+      width: "100%",
     };
     return (
       <div>
         <Form>
-          <Form.Group className="loginInput" style={loginStyle}>
-            <Form.Label>로그인(Enter)</Form.Label>
+          <Row style={loginRowStyle}>
+            <Col>
+              <img src="study.jpg" alt="profile" style={imgStyle} />
+            </Col>
+            <Col>
+              <Form.Group className="loginInput" style={loginStyle}>
+                <Form.Label>로그인(Login)</Form.Label>
 
-            <Form.Group className="formGroupEmail">
-              <Form.Label>이메일 주소</Form.Label>
-              <Form.Control
-                type="email"
-                maxLength="100"
-                ref={ref => (this.loginEmail = ref)}
-                placeholder="Enter email"
-              />
-            </Form.Group>
-            <Form.Group className="formGroupPassword">
-              <Form.Label>비밀번호</Form.Label>
-              <Form.Control
-                type="password"
-                maxLength="20"
-                ref={ref => (this.loginPassword = ref)}
-                placeholder="Password"
-              />
-            </Form.Group>
+                <Form.Group className="formGroupEmail">
+                  <Form.Label>이메일 주소</Form.Label>
+                  <Form.Control
+                    type="email"
+                    maxLength="100"
+                    ref={ref => (this.loginEmail = ref)}
+                    placeholder="Enter email"
+                  />
+                </Form.Group>
+                <Form.Group className="formGroupPassword">
+                  <Form.Label>비밀번호</Form.Label>
+                  <Form.Control
+                    type="password"
+                    maxLength="20"
+                    ref={ref => (this.loginPassword = ref)}
+                    placeholder="Password"
+                  />
+                </Form.Group>
 
-            <Button
-              variant="dark"
-              type="button"
-              style={loginButton}
-              onClick={this.login}
-              block
-            >
-              로그인
-            </Button>
-            <Link to="/SignUp">
-              <Button variant="dark" type="button" style={loginButton} block>
-                회원가입하러 가기
-              </Button>
-            </Link>
-          </Form.Group>
+                <Button
+                  variant="dark"
+                  type="button"
+                  style={loginButton}
+                  onClick={this.login}
+                  block
+                >
+                  로그인
+                </Button>
+                <Link to="/SignUp">
+                  <Button
+                    variant="dark"
+                    type="button"
+                    style={loginButton}
+                    block
+                  >
+                    회원가입하러 가기
+                  </Button>
+                </Link>
+              </Form.Group>
+            </Col>
+          </Row>
         </Form>
       </div>
     );
   }
 }
 
-export default SignUp;
+export default Login;

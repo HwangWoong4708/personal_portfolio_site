@@ -5,7 +5,7 @@ class AppBar extends React.Component {
   render() {
     const appbarStyle = {
       width: "100%",
-      minWidth: 1080,
+      minWidth: "1920px",
     };
     return (
       <div className="bar" style={appbarStyle}>
