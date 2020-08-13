@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import "./mainScreen.css";
+import "./MainScreen.css";
 
 const Description = styled.span`
   width: 73%;
@@ -34,18 +34,23 @@ class mainScreen extends React.Component {
   render() {
     const imgStyle = {
       margin: "10%",
-
-      //width: "100%",
+      height: "100%",
+      width: "100%",
     };
     const screenButton = {
-      marginLeft: "5px",
+      marginLeft: "20%",
     };
     const screenStyle = {
-      minWidth: 1080,
+      minWidth: 1920,
     };
 
     const sectionStyle = {
       marginTop: "20%",
+      marginLeft: "20%",
+    };
+
+    const loginButtonStyle = {
+      marginRight: "10px",
     };
     return (
       <div className="mainscreen" style={screenStyle}>
@@ -67,16 +72,18 @@ class mainScreen extends React.Component {
                 <br /> HBD가 도와드리겠습니다!.
               </SubTitle>
             </section>
-            <Link to="Login">
-              <Button variant="dark" type="button">
-                로그인
-              </Button>
-            </Link>
-            <Link to="SignUp">
-              <Button variant="dark" type="button" style={screenButton}>
-                회원 가입
-              </Button>
-            </Link>
+            <div className="mainScreenbutton" style={screenButton}>
+              <Link to="Login">
+                <Button variant="dark" type="button" style={loginButtonStyle}>
+                  로그인
+                </Button>
+              </Link>
+              <Link to="SignUp">
+                <Button variant="dark" type="button">
+                  회원 가입
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

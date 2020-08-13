@@ -2,6 +2,7 @@ import React from "react";
 import { Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Row, Col } from "react-bootstrap";
+
 class SignUp extends React.Component {
   signUp = () => {
     const signupEmail = this.signupEmail.value;

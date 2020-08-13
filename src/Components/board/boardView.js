@@ -1,5 +1,6 @@
 import React from "react";
-import "./boardView.css";
+import "./BoardView.css";
+
 class BoardView extends React.Component {
   render() {
     return (
