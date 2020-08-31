@@ -27,10 +27,6 @@ class MyProfile extends React.Component {
     const MenuStyle = {
       marginTop: "20px",
     };
-    const secondColstyle = {};
-    const firstColstyle = {
-      textAlign: "center",
-    };
     const profileTitle = {
       fontSize: "38px",
     };
